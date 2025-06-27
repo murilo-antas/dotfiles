@@ -1,0 +1,20 @@
+-- Move to window using the <ctrl> hjkl keys
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
+
+-- buffers
+vim.keymap.set("n", "<S-h>", "<cmd>bprevious<cr>")
+vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>")
+vim.keymap.set("n", "[b", "<cmd>bprevious<cr>")
+vim.keymap.set("n", "]b", "<cmd>bnext<cr>")
+vim.keymap.set("n", "<leader>bb", "<cmd>e #<cr>")
+vim.keymap.set("n", "<leader>`", "<cmd>e #<cr>")
+vim.keymap.set("n", "<leader>bd", function()
+  Snacks.bufdelete()
+end)
+vim.keymap.set("n", "<leader>bo", function()
+  Snacks.bufdelete.other()
+end)
+vim.keymap.set("n", "<leader>bD", "<cmd>:bd<cr>")
