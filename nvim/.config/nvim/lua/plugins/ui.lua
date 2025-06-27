@@ -90,7 +90,6 @@ return {
 
     -- ui components
     { "MunifTanjim/nui.nvim", lazy = true },
-
     {
         "snacks.nvim",
         opts = {
