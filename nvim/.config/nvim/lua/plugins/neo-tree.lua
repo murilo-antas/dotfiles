@@ -9,7 +9,10 @@ return {
     },
     lazy = false,                  -- neo-tree will lazily load itself
     config = function()
-        require("neo-tree").setup({ window = { position = "right" } })
+        require("neo-tree").setup({
+            filesystem = { use_libuv_file_watcher = true },
+            window = { position = "right" },
+        })
         vim.keymap.set("n", "<leader>e", "<Cmd>Neotree toggle<CR>")
     end,
 }
